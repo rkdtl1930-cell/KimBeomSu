@@ -1,5 +1,6 @@
 package com.four.animory.service;
 
+import com.four.animory.domain.spr.SprBoard;
 import com.four.animory.domain.user.Member;
 import com.four.animory.domain.user.Pet;
 import com.four.animory.repository.user.MemberRepository;
