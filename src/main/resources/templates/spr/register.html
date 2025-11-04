@@ -23,6 +23,7 @@
                     <option value="신고">신고</option>
                 </select>
             </div>
+            <!-- 카테고리가 나눔일 때 만 시도군구 표시 -->
             <div class="mb-2">
                 <div class="d-flex align-items-center gap-1">
                     <select class="form-select" id="sido" name="sido" required>
@@ -33,17 +34,20 @@
                     </select>
                 </div>
             </div>
+            <!-- 시도군구 표시 끝 -->
             <div class="mb-2">
                 <input class="form-control" name="title" placeholder="제목을 입력해주세요" required type="text">
             </div>
             <div class="mb-2">
-                <textarea class="form-control" cols="30" id="content" name="content" placeholder="나눔/공구 게시글 작성 시 마감되면 수정을 통해 완료 체크해주세요!(글자 수는 최대 1000자)"
+                <textarea class="form-control" cols="30" id="content" name="content" placeholder="나눔/공구 게시글 작성 시 마감되면 수정을 통해 완료 체크해주세요! 신고 게시글 작성 시 관련 첨부 파일은 필수 입니다!(글자 수는 최대 1000자)"
                 required rows="10"></textarea>
             </div>
+            <!-- 카테고리가 공구 일 때만 마감일 표시 -->
             <div class="mb-2">
-                <span class="form-control" id="due">마감일(시간은 무시하셔도 됩니다)</span>
-                <input class="form-control" type="datetime-local" name="dueDate" id="dueDate">
+                <span class="form-control" id="due">마감일</span>
+                <input class="form-control" type="date" name="dueDate" id="dueDate">
             </div>
+            <!-- 마감일 표시 끝 -->
             <div class="mb-3">
                 <input class="form-control" multiple name="files" type="file">
             </div>

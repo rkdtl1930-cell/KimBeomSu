@@ -34,9 +34,8 @@ public class SprBoard extends BaseEntity {
     @Column(nullable = false, length = 3000)
     private String content;
     private int readcount;
-    @DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
-    @Column(name="duedate", nullable = true)
-    private LocalDateTime dueDate;
+    @Column(name="duedate", nullable = true, length = 300)
+    private String dueDate;
     private int recommend;
     private boolean complete;
     @ManyToOne(fetch = FetchType.LAZY)

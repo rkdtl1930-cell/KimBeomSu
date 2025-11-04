@@ -34,7 +34,7 @@ public interface SprService {
                 .bno(sprBoard.getBno())
                 .title(sprBoard.getTitle())
                 .content(sprBoard.getContent())
-//                .author(member.getNickname())
+                .author(sprBoard.getMember().getNickname())
                 .readcount(sprBoard.getReadcount())
                 .regDate(sprBoard.getRegDate())
                 .updateDate(sprBoard.getUpdateDate())

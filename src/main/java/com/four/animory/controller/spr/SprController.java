@@ -29,7 +29,7 @@ public class SprController {
     private UserService userService;
 
     @GetMapping("/list")
-    public void list(@AuthenticationPrincipal PrincipalDetails principal ,PageRequestDTO pageRequestDTO, Model model){
+    public void list(PageRequestDTO pageRequestDTO, Model model){
         PageResponseDTO<SprBoardDTO> responseDTO = sprService.getList(pageRequestDTO);
         model.addAttribute("responseDTO",responseDTO);
         model.addAttribute("pageRequestDTO",pageRequestDTO);

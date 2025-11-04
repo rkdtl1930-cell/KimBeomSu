@@ -55,6 +55,10 @@
                     <div class="py-2">
                         <div class="d-flex gap-2 flex-nowrap mb-2">
                             <p class="badge badge-success">[[${board.category}]]</p>
+                            <!-- 나눔 / 공구 카테고리일 때 진행중 / 완료 표시 뱃지 -->
+                            <p class="badge badge-info" th:if="${board.category == '나눔' || board.category == '공구'} and ${board.complete == false}">[[${board.category}]]중</p>
+                            <p class="badge badge-info" th:if="${board.category == '나눔' || board.category == '공구'} and ${board.complete == true}">[[${board.category}]]완료</p>
+                            <!-- 표시 뱃지 끝 -->
                         </div>
                         <a th:href="@{/spr/view(bno=${board.bno}, mode=1)}" class="d-block mb-1">
                             <h5 class="text-overflew-line-2">[[${board.title}]]</h5>

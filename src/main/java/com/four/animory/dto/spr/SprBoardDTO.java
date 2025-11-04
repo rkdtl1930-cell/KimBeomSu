@@ -35,8 +35,7 @@ public class SprBoardDTO {
     private LocalDateTime updateDate;
     private List<SitterFile> fileDTOs;
     @Future
-    @DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime dueDate;
+    private String dueDate;
     private int recommend;
     private boolean complete;
     private Long replyCount;
